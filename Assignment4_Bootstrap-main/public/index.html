@@ -5,181 +5,260 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INM320 Bootstrap</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/stylesheet.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	
 </head>
 <body>
-	<!-- Navbar -->
-	<nav class="navbar navbar-dark bg-dark" data-bs-theme="dark">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
-				<img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24">
-				Dashboard
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-			<div class="offcanvas-header">
-				<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dashboard</h5>
-				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-			</div>
-			<!-- I am here -->
-			<ul class="navbar-nav">
-			  <li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="#">Home</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Features</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Pricing</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link disabled" aria-disabled="true">Disabled</a>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-	  </nav>
-
-<!-- 	
 	<div class="container-fluid">
 		<div class="row">
-			<nav class="sidebar col text-white-50 bg-dark"> 
-				<div class="container-fluid">
-					<span class="fs-5 fw-semibold text-white-50 text-center">Dashboard Kit</span>
+
+			<!-- Side Navbar -->
+			<nav class="col-lg-2 d-lg-block px-0 sticky-top navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+				<div class="container-fluid d-flex px-0">
+					<div id="logo" class="py-3 px-3">
+						<a class="navbar-brand d-flex gap-2" href="#">
+							<img src="/assets/images/logo.svg" alt="Logo" width="30" height="24">
+							<h6 class="fw-bold">Dashboard Kit</h6>
+						</a>
+					</div>
+					<button class="navbar-toggler collapsed d-lg-none mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div class="container-fluid offcanvas offcanvas-start py-lg-0 py-sm-5 d-lg-block" id="navbar">
+						<ul class="navbar-nav mb-auto d-flex flex-column flex-shrink-0">
+							<li class="nav-item">
+								<a href="#" class="nav-link active d-flex align-items-center gap-3" aria-current="page" href="#">
+									<i class="ps-2 bi bi-pie-chart-fill"></i> Overview
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-ticket-detailed-fill"></i> Tickets
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-lightbulb-fill"></i> Ideas
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-people-fill"></i> Contacts
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-person-badge-fill"></i> Agents
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-book-half"></i> Articles
+								</a>
+							</li>
+							<li><hr class="my-3"></li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-gear-fill"></i> Settings
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link d-flex align-items-center gap-3" href="#">
+									<i class="ps-2 bi bi-award-fill"></i> Subsciption
+								</a>
+							</li>
+						  </ul>
+					</div>	
 				</div>
-				<ul class="navbar-nav">
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-chart-pie"></i>
-						Overview
-						</a>
-					</li>
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-ticket"></i>
-						Tickets
-						</a>
-					</li>
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-lightbulb"></i>
-						Ideas
-						</a>
-					</li>
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-users"></i>
-						Contacts
-						</a>
-					</li>
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-user-tie"></i>
-						Agents
-						</a>
-					</li>
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-book"></i>
-						Articles
-						</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav">
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-gear"></i>
-						Setting</a></li>
-					<li>
-						<a href="#" class="nav-item text-white-50">
-						<i class="fa-solid fa-award"></i>
-						Subscribtion</a></li>
-				</ul>
+			
 			</nav>
-		
-			<div class="col-9 ">
-				Overview
-				<div class="row">
-					<div class="col">1</div>
-					<div class="col">2</div>
-					<div class="col">3</div>
-					<div class="col">4</div>
+
+			<!-- Main -->
+			<div class="container col-lg-10 text-bg-light pb-4">
+
+				<!-- Header -->
+				<div header class="row justify-content-between align-items-center gap-3 p-3">
+					<div class="col">
+						<h5 class="fw-bold">Overview</h5>
+					</div>
+					<div class="col d-flex justify-content-end align-items-center gap-3 ms-auto">
+						<i class="bi bi-search text-body-tertiary"></i>
+						<i class="bi bi-bell-fill text-body-tertiary"></i>
+						<div class="vr"></div>
+						<div class="fw-bold">Jones Ferdinand</div>
+						<img src="/assets/images/avatar.png" alt="profile" width="44" height="44" class="rounded-circle p-1 object-fit-cover border border-2">
+				
+					</div>
 				</div>
-				<div class="col">a</div>
-				<div class="row">
-					<div class="col">1</div>
-					<div class="col">2</div>
+
+				<!-- Dashboard -->
+				<div class="container">
+
+					<!-- Overview -->
+					<div class="row row-cols-2 row-cols-lg-4 g-3 g-lg-4 my-3 text-center">
+						<div class="col">
+							<a href="#" class="card bg-white p-3 d-flex flex-column gap-1">
+								<p class="card-title">Unresolved</p>
+								<h4 class="card-text number">60</h4>
+							</a>
+						</div>
+						<div class="col">
+							<a href="#" class="card bg-white p-3 d-flex flex-column gap-1">
+								<p class="card-title">Overdue</p>
+								<h4 class="card-text number">16</h4>
+							</a>
+						</div>
+						<div class="col">
+							<a href="#" class="card bg-white p-3 d-flex flex-column gap-1">
+								<p class="card-title">Open</p>
+								<h4 class="card-text number">43</h4>
+							</a>
+						</div>
+						<div class="col">
+							<a href="#" class="card bg-white p-3 d-flex flex-column gap-1">
+								<p class="card-title">On hold</p>
+								<h4 class="card-text number">64</h4>
+							</a>
+						</div>
+					</div>
+
+					<!-- Graph -->
+					<div class="container card my-4">
+						<div class="row g-3">
+							<div id="graph" class="col-md-8 p-3 d-flex flex-column justify-content-between">
+								<div>
+									<h6 class="card-title">Today's trends</h6>
+									<div class="row justify-content-between gap-3">
+										<p class="col card-text small text-body-tertiary">as of 25 May 2019</p>
+										<ul class="col d-flex justify-content-end gap-3 ms-auto">
+											<li class="d-flex gap-1">
+												<img src="/assets/images/horizontal.svg"  width="16px" alt="today indicator" />
+												<p class="card-text small">Today</p>
+											</li>
+											<li class="d-flex gap-1">
+												<img src="/assets/images/horizontal-1.svg" width="16px" alt="yesterday indicator">
+												<p class="card-text small">Yesterday</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<img src="/assets/images/full graph.svg" class="img-fluid" alt="graph" />
+							</div>
+							<div class="col-md-4">
+								<ul class="data list-group row d-flex align-content-stretch text-center p-3">
+									<li class="list-group-item col py-3">
+										<p class="card-title">Resolved</p>
+										<h6 class="card-text number">449</h6>
+									</li>
+									<li class="list-group-item col py-3">
+										<p class="card-title">Received</p>
+										<h6 class="card-text number">426</h6>
+									</li>
+									<li class="list-group-item col py-3">
+										<p class="card-title">Average first response time</p>
+										<h6 class="card-text number">33m</h6>
+									</li>
+									<li class="list-group-item col py-3">
+										<p class="card-title">Average response time</p>
+										<h6 class="card-text number">3h 8m</h6>
+									</li>
+									<li class="list-group-item col py-3">
+										<p class="card-title">Resolution within SLA</p>
+										<h6 class="card-text number">94%</h6>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Records -->
+					<div class="container px-0">
+						<div class="row gap-3">
+							<div class="col-md">
+								<div class="card p-3 d-flex flex-column">
+									<div class="d-flex justify-content-between">
+										<p class="card-title text-black">Unresolved tickets</p>
+										<a href="#" class="text-primary link-underline link-underline-opacity-0">View details</a>
+									</div>
+									<p class="small text-body-tertiary">Group: <span class="text-secondary-emphasis">Support</span></p>
+									<ul class="list-group border-0">
+										<li class="list-group-item d-flex justify-content-between p-3">
+											<p class="mb-0 text-body">Waiting on Feature Request</p>
+											<p class="mb-0 text-body-tertiary">4238</p>
+										</li>
+										<li class="list-group-item d-flex justify-content-between p-3">
+											<p class="mb-0 text-body">Awaiting Customer Response</p>
+											<p class="mb-0 text-body-tertiary">1005</p>
+										</li>
+										<li class="list-group-item d-flex justify-content-between p-3">
+											<p class="mb-0 text-body">Awaiting Developer Fix</p>
+											<p class="mb-0 text-body-tertiary">914</p>
+										</li>
+										<li class="list-group-item d-flex justify-content-between p-3">
+											<p class="mb-0 text-body">Pending</p>
+											<p class="mb-0 text-body-tertiary">281</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md">
+								<div class="card p-3 d-flex flex-column pb-4">
+									<div class="d-flex justify-content-between">
+										<p class="card-title text-black">Tasks</p>
+										<a href="#" class="text-primary link-underline link-underline-opacity-0">View details</a>
+									</div>
+									<p class="small text-body-tertiary">Today</p>
+									<ul class="list-group border-0">
+										<li class="list-group-item d-flex p-2">
+											<input id="field" class="form-control border-0" type="text" placeholder="Create new task" aria-label="create new task">
+											<button type="button" class="btn btn-light px-3 rounded-3 text-secondary fw-bold">+</button>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center p-2">
+											<div class="list-title d-flex gap-2">
+												<input class="form-check-input rounded" type="checkbox" name="task" id="task1">
+												<label class="form-check-label" for="task1">Finish ticket update</label>	
+											</div>
+											<div class="tag small rounded-3 bg-warning text-white px-3 py-2">URGENT</div>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center p-2">
+											<div class="list-title d-flex gap-2">
+												<input class="form-check-input rounded" type="checkbox" name="task" id="task2">
+												<label class="form-check-label" for="task2">Create new ticket example</label>	
+											</div>
+											<div class="tag small rounded-3 bg-success text-white px-3 py-2">NEW</div>
+										</li>
+										<li class="list-group-item d-flex justify-content-between align-items-center p-2">
+											<div class="list-title d-flex gap-2">
+												<input class="form-check-input rounded" type="checkbox" name="task" id="task3" checked>
+												<label class="form-check-label" for="task3">Update ticket report</label>	
+											</div>
+											<div class="tag small rounded-3 bg-secondary-subtle text-body-tertiary px-3 py-2">DEFAULT</div>
+										</li>
+									</ul>	
+								</div>
+
+								
+							</div>
+						</div>
+					</div>	
+
 				</div>
+
 			</div>
+			
 		</div>
-	</div> -->
-	
-	<!-- <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-		<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-		  <svg class="bi me-2" width="40" height="32"><use xlink:href="#"></use></svg>
-		  <span class="fs-4">Dashboard Kit</span>
-		</a>
-		<hr>
-		<ul class="nav nav-pills flex-column mb-auto">
-		  <li class="nav-item">
-			<a href="#" class="nav-link active" aria-current="page">
-				<svg class="bi me-2" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-					<path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"/>
-				</svg>
-				Overview
-			</a>
-		  </li>
-		  <li>
-			<a href="#" class="nav-link text-white">
-			  <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-			  Dashboard
-			</a>
-		  </li>
-		  <li>
-			<a href="#" class="nav-link text-white">
-			  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-			  Orders
-			</a>
-		  </li>
-		  <li>
-			<a href="#" class="nav-link text-white">
-			  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-			  Products
-			</a>
-		  </li>
-		  <li>
-			<a href="#" class="nav-link text-white">
-			  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-			  Customers
-			</a>
-		  </li>
-		</ul>
-		<hr>
-		<div class="dropdown">
-		  <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-			<img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-			<strong>mdo</strong>
-		  </a>
-		  <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-			<li><a class="dropdown-item" href="#">New project...</a></li>
-			<li><a class="dropdown-item" href="#">Settings</a></li>
-			<li><a class="dropdown-item" href="#">Profile</a></li>
-			<li><hr class="dropdown-divider"></li>
-			<li><a class="dropdown-item" href="#">Sign out</a></li>
-		  </ul>
-		</div>
-	  </div> -->
-	<script src="https://kit.fontawesome.com/0dad833010.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

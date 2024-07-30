@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server --baseDir=\"public\""
+  "dev": "lite-server --baseDir=\"public\"",
+  "watch": "sass --watch src/scss:public/assets/css",
+  "start": "concurrently \"npm run watch\" \"npm run dev\""
   },
   "author": "Panida Ussavaphark",
   "license": "private",
   "private": true,
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "concurrently": "^8.2.2",
+    "lite-server": "^2.6.1",
+    "sass": "^1.77.8"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
