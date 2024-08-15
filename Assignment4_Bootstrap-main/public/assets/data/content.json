@@ -1,0 +1,71 @@
+{   "card" : [
+    {
+        "cardTitle" : "Today's Trend",
+        "trend": [
+            {
+                "title" : "Resolved",
+                "number" : 449
+            },
+            {
+                "title" : "Recieved",
+                "number" : 426
+            },
+            {
+                "title" : "Average first response time",
+                "number" : 33
+            },
+            {
+                "title" : "Average response time",
+                "number" : 3.13
+            },
+            {
+                "title" : "Average response time",
+                "number" : 94
+            }
+        ]
+    },
+    {
+        "cardTitle" : "Unresolved tickets",
+        "Group": "Support",
+        "tickets": [
+            {
+                "title" : "Waiting on Feature Request",
+                "number" : 4238
+            },
+            {
+                "title" : "Awaiting Customer Response",
+                "number" : 1005
+            },
+            {
+                "title" : "Awaiting Developer Fix",
+                "number" : 914
+            },
+            {
+                "title" : "Pending",
+                "number" : 281
+            }
+        ]
+    },
+    {
+        "cardTitle" : "Tasks",
+        "tasks": [
+        {
+            "title": "Finish ticket update",
+            "status": "URGENT"
+        },
+        {
+            "title": "Create new ticket example",
+            "status": "NEW"
+        },
+        {
+            "title": "Update ticket report",
+            "status": "DEFAULT",
+            "completed": true
+        }
+    ]
+
+
+    }]
+
+}
+
